@@ -157,7 +157,7 @@
     function search (json, keywords) {
         var WEIGHTS = weightFactory(keywords);
         var FILTERS = filterFactory(keywords);
-        var posts = json.posts;
+        var posts = json;
         // var pages = json.pages;
         var tags = extractToSet(json, 'tags');
         var categories = extractToSet(json, 'categories');

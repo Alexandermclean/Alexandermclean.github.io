@@ -466,17 +466,6 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<!-- 因为vue和botui更新导至bug,现将对话移至js下的botui中配置 --><div class="entry-content">  <div class="moe-mashiro" style="text-align:center; font-size: 50px; margin-bottom: 20px;">[さくら荘のhojun]</div>  <div id="hello-mashiro" class="popcontainer" style="min-height: 300px; padding: 2px 6px 4px; background-color: rgba(242, 242, 242, 0.5); border-radius: 10px;">    <center>    <p>    </p>    <h4>    与&nbsp;<ruby>    Mashiro&nbsp;<rp>    （</rp>    <rt>    真（ま）白（しろ）</rt>    <rp>    ）</rp>    </ruby>    对话中...</h4>    <p>    </p>    </center>    <bot-ui></botui>  </div></div><script src="/js/botui.js"></script><script>bot_ui_ini()</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>bangumi</title>
       <link href="/bangumi/index.html"/>
       <url>/bangumi/index.html</url>
@@ -488,22 +477,22 @@
     
     
     <entry>
-      <title>client</title>
-      <link href="/client/index.html"/>
-      <url>/client/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<p>直接下载 or 扫码下载：</p><div style="text-align: center;"><img class="lazyload" data-src="https://view.moezx.cc/images/2018/06/08/app-download.png#in-center#width-50" style="width: 200px; height: 200px;" alt=""></div>]]></content>
+        <content type="html"><![CDATA[<!-- 因为vue和botui更新导至bug,现将对话移至js下的botui中配置 --><div class="entry-content">  <div class="moe-mashiro" style="text-align:center; font-size: 50px; margin-bottom: 20px;">[さくら荘のhojun]</div>  <div id="hello-mashiro" class="popcontainer" style="min-height: 300px; padding: 2px 6px 4px; background-color: rgba(242, 242, 242, 0.5); border-radius: 10px;">    <center>    <p>    </p>    <h4>    与&nbsp;<ruby>    Mashiro&nbsp;<rp>    （</rp>    <rt>    真（ま）白（しろ）</rt>    <rp>    ）</rp>    </ruby>    对话中...</h4>    <p>    </p>    </center>    <bot-ui></botui>  </div></div><script src="/js/botui.js"></script><script>bot_ui_ini()</script>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>comment</title>
-      <link href="/comment/index.html"/>
-      <url>/comment/index.html</url>
+      <title>client</title>
+      <link href="/client/index.html"/>
+      <url>/client/index.html</url>
       
-        <content type="html"><![CDATA[<div class="entry-content">  <div class="poem-wrap">    <div class="poem-border poem-left">    </div>    <div class="poem-border poem-right">    </div>    <h1>    念两句诗</h1>    <p id="poem">    叙别梦、扬州一觉。</p>    <p id="info">    【宋代】吴文英《夜游宫·人去西楼雁杳》</p>  </div></div>]]></content>
+        <content type="html"><![CDATA[<p>直接下载 or 扫码下载：</p><div style="text-align: center;"><img class="lazyload" data-src="https://view.moezx.cc/images/2018/06/08/app-download.png#in-center#width-50" style="width: 200px; height: 200px;" alt=""></div>]]></content>
       
     </entry>
     
@@ -532,6 +521,17 @@
     
     
     <entry>
+      <title>comment</title>
+      <link href="/comment/index.html"/>
+      <url>/comment/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="entry-content">  <div class="poem-wrap">    <div class="poem-border poem-left">    </div>    <div class="poem-border poem-right">    </div>    <h1>    念两句诗</h1>    <p id="poem">    叙别梦、扬州一觉。</p>    <p id="info">    【宋代】吴文英《夜游宫·人去西楼雁杳》</p>  </div></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <url>/links/index.html</url>
@@ -554,9 +554,9 @@
     
     
     <entry>
-      <title>rss</title>
-      <link href="/rss/index.html"/>
-      <url>/rss/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -565,9 +565,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>rss</title>
+      <link href="/rss/index.html"/>
+      <url>/rss/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
