@@ -50,7 +50,12 @@
 
     function extractToSet (json, key) {
         var values = {};
-        var entries = json.pages.concat(json.posts);
+        if (json.pages && json.posts) {
+            var entries = json.pages.concat(json.posts);
+        } else {
+            var entries = json
+        }
+        
         entries.forEach(function (entry) {
             if (entry[key]) {
                 entry[key].forEach(function (value) {
