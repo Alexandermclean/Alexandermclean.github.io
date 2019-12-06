@@ -50,12 +50,7 @@
 
     function extractToSet (json, key) {
         var values = {};
-        if (json.pages && json.posts) {
-            var entries = json.pages.concat(json.posts);
-        } else {
-            var entries = json
-        }
-        
+        var entries = json.pages.concat(json.posts);
         entries.forEach(function (entry) {
             if (entry[key]) {
                 entry[key].forEach(function (value) {
@@ -157,7 +152,7 @@
     function search (json, keywords) {
         var WEIGHTS = weightFactory(keywords);
         var FILTERS = filterFactory(keywords);
-        var posts = json;
+        var posts = json.posts;
         // var pages = json.pages;
         var tags = extractToSet(json, 'tags');
         var categories = extractToSet(json, 'categories');
