@@ -90,7 +90,7 @@ function bot_ui_ini() {
                                     botui.action.button({
                                         delay: 1100,
                                         action: [{
-                                            text: "这个blog主要内容是什么的呢？ 🤔",
+                                            text: "这个blog主要写什么呢？ 🤔",
                                             value: "why-mashiro"
                                         }]
                                     }).then(function (a) {
