@@ -143,7 +143,7 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "你介话问的！这能不帅么？而且我头发还很多..."
+                content: "你介话问的！那能不帅么？！而且我头发还很多..."
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
