@@ -26,7 +26,7 @@ function bot_ui_ini() {
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "这里是 余政辉（真名）"
+            content: "这里是 余辉（真名）"
         }).then(function () {
             botui.message.add({
                 delay: 1100,
