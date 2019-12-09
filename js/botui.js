@@ -85,7 +85,7 @@ function bot_ui_ini() {
                             }).then(function () {
                                 botui.message.add({
                                     delay: 1800,
-                                    content: "喜欢画画，希望有一天能够被称为画师"
+                                    content: "喜欢唱歌，南山周杰伦正是在下🤠"
                                 }).then(function () {
                                     botui.action.button({
                                         delay: 1100,
