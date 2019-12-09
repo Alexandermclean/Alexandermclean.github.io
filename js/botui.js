@@ -26,11 +26,11 @@ function bot_ui_ini() {
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "这里是 Mashiro"
+            content: "这里是 余政辉（真名）"
         }).then(function () {
             botui.message.add({
                 delay: 1100,
-                content: "一个可爱的蓝孩子~"
+                content: "一个头发很多的web前端开发~"
             }).then(function () {
                 botui.action.button({
                     delay: 1600,
@@ -38,7 +38,7 @@ function bot_ui_ini() {
                         text: "然后呢？ 😃",
                         value: "sure"
                     }, {
-                        text: "少废话！ 🙄",
+                        text: "闭嘴！ 🙄",
                         value: "skip"
                     }]
                 }).then(function (a) {
@@ -65,23 +65,23 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "目前就读于上海财经大学"
+                content: "16年毕业于重庆南山皇家邮电大学"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
-                    content: "向往技术却误入商科，但后来喜欢上了经济学…"
+                    content: "目前在鹅厂做前端攻城🦁"
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
-                        content: "因为数据分析也需要Coder嘛"
+                        content: "算是半路出家的程序猿👨‍💻‍"
                     }).then(function () {
                         botui.message.add({
                             delay: 1500,
-                            content: "主攻 R 语言和 Python，略懂 STATA，偶尔也折腾 HTML/CSS/JavaScript/PHP"
+                            content: "虽然毕业一来一直在学习前端开发，但总归是觉得有点菜"
                         }).then(function () {
                             botui.message.add({
                                 delay: 1500,
-                                content: "研究的方向，是经济/金融方向的数据分析（data science）以及机器学习（machine learning）"
+                                content: "主要使用nodejs+react/vue和react-native技术栈"
                             }).then(function () {
                                 botui.message.add({
                                     delay: 1800,
@@ -90,7 +90,7 @@ function bot_ui_ini() {
                                     botui.action.button({
                                         delay: 1100,
                                         action: [{
-                                            text: "为什么叫Mashiro呢？ 🤔",
+                                            text: "这个blog主要内容是什么的呢？ 🤔",
                                             value: "why-mashiro"
                                         }]
                                     }).then(function (a) {
@@ -106,12 +106,12 @@ function bot_ui_ini() {
         thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "Mashiro以及站名都来自一部动画，因为和主角有一样的爱好~ 如果有兴趣可以找找首页上的视频~"
+                content: "这个blog主要是写一些日常技术总结和笔记，偶尔会写一些优(jiao)美(qing)的文章🤡"
             }).then(function () {
                 botui.action.button({
                     delay: 1500,
                     action: [{
-                        text: "为什么是白猫呢？ 🤔",
+                        text: "为什么叫肉夹魔呢？ 🤔",
                         value: "why-cat"
                     }]
                 }).then(function (a) {
@@ -122,16 +122,16 @@ function bot_ui_ini() {
         fourthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "因为对GitHub有种执念… "
+                content: "因为肉夹馍好吃... "
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
-                    content: "而且我真的是猫控！"
+                    content: "而肉夹魔有排面👿"
                 }).then(function () {
                     botui.action.button({
                         delay: 1500,
                         action: [{
-                            text: "域名有什么含意吗？(ง •_•)ง",
+                            text: "你长的帅么？(ง •_•)ง",
                             value: "why-domain"
                         }]
                     }).then(function (a) {
@@ -143,11 +143,11 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "emmmm，看备案信息你就知道了=.= 本来想要zheng.xin的，但50万真买不起。。"
+                content: "你介话问的！这能不帅么？而且我头发还很多..."
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
-                    content: "那么，仔细看看我的博客吧？ ^_^"
+                    content: "好好看博客！别光被外表吸引了，内涵这东西要细品🤪"
                 })
             })
         } 
