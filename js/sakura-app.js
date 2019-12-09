@@ -1335,13 +1335,13 @@ var home = location.href,
             result = $(data).find('#main .post')
             nextHref = $(data).find('#pagination a').attr('href')
             $('#main').append(result.fadeIn(500))
-            $('#pagination a').removeClass('loading').text('Previous')
+            $('#pagination a').removeClass('loading').text('加载更多')
             lazyload()
             mashiro_global.post_list_show_animation.ini(50)
             if (nextHref != undefined) {
               $('#pagination a').attr('href', nextHref)
             } else {
-              $('#pagination').html('<span>很高兴你翻到这里，但是真的没有了...</span>')
+              $('#pagination').html('<span>很高兴你翻到这里，但我是有底线的...</span>')
             }
           }
         })
