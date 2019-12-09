@@ -77,7 +77,7 @@ function bot_ui_ini() {
                     }).then(function () {
                         botui.message.add({
                             delay: 1500,
-                            content: "虽然毕业一来一直在学习前端开发，但总归是觉得有点菜"
+                            content: "虽然毕业以来一直在学习前端开发，但总归是觉得有点菜"
                         }).then(function () {
                             botui.message.add({
                                 delay: 1500,
@@ -85,7 +85,7 @@ function bot_ui_ini() {
                             }).then(function () {
                                 botui.message.add({
                                     delay: 1800,
-                                    content: "喜欢唱歌，南山周杰伦正是在下🤠"
+                                    content: "喜欢唱歌，南山周杰伦正是说的在下🤠"
                                 }).then(function () {
                                     botui.action.button({
                                         delay: 1100,
