@@ -73,7 +73,7 @@ function bot_ui_ini() {
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
-                        content: "算是半路出家的程序猿👨‍💻‍"
+                        content: "算是个半路出家的程序猿👨‍💻‍"
                     }).then(function () {
                         botui.message.add({
                             delay: 1500,
