@@ -83,26 +83,6 @@
   </entry>
   
   <entry>
-    <title>容易忘的用法</title>
-    <link href="http://yoursite.com/2018/01/08/basic/"/>
-    <id>http://yoursite.com/2018/01/08/basic/</id>
-    <published>2018-01-08T14:16:01.000Z</published>
-    <updated>2019-12-09T14:26:20.405Z</updated>
-    
-    <summary type="html">
-    
-      平时开发会忘的一些小用法
-    
-    </summary>
-    
-      <category term="note" scheme="http://yoursite.com/categories/note/"/>
-    
-    
-      <category term="basic" scheme="http://yoursite.com/tags/basic/"/>
-    
-  </entry>
-  
-  <entry>
     <title>异步调用</title>
     <link href="http://yoursite.com/2018/01/08/async&amp;promise/"/>
     <id>http://yoursite.com/2018/01/08/async&amp;promise/</id>
@@ -119,6 +99,26 @@
     
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>容易忘的用法</title>
+    <link href="http://yoursite.com/2018/01/08/basic/"/>
+    <id>http://yoursite.com/2018/01/08/basic/</id>
+    <published>2018-01-08T14:16:01.000Z</published>
+    <updated>2019-12-09T14:26:20.405Z</updated>
+    
+    <summary type="html">
+    
+      平时开发会忘的一些小用法
+    
+    </summary>
+    
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
+    
+      <category term="basic" scheme="http://yoursite.com/tags/basic/"/>
     
   </entry>
   

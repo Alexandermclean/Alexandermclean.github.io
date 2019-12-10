@@ -85,31 +85,6 @@
     
     
     <entry>
-      <title>容易忘的用法</title>
-      <link href="/2018/01/08/basic/"/>
-      <url>/2018/01/08/basic/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-代码托管"><a href="#1-代码托管" class="headerlink" title="1.代码托管"></a>1.代码托管</h2><p>基于gitLab的代码版本管理，简单的写下流程吧</p><ol><li>git clone 项目远程主机路径/git clone -b 具体分支 项目远程主机；会有一个默认的remote叫做origin</li><li>git remote add xxx（自己的远程主机名） 远程主机路径</li><li>git push xxx 本地分支名称:远程分支名称（没有分支名称时自动创建）</li><li>git fetch origin / git merge origin 分支名</li></ol><p>后续用到了再来写吧: )</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> note </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> basic </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>异步调用</title>
       <link href="/2018/01/08/async&amp;promise/"/>
       <url>/2018/01/08/async&amp;promise/</url>
@@ -127,6 +102,31 @@
         <tags>
             
             <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>容易忘的用法</title>
+      <link href="/2018/01/08/basic/"/>
+      <url>/2018/01/08/basic/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-代码托管"><a href="#1-代码托管" class="headerlink" title="1.代码托管"></a>1.代码托管</h2><p>基于gitLab的代码版本管理，简单的写下流程吧</p><ol><li>git clone 项目远程主机路径/git clone -b 具体分支 项目远程主机；会有一个默认的remote叫做origin</li><li>git remote add xxx（自己的远程主机名） 远程主机路径</li><li>git push xxx 本地分支名称:远程分支名称（没有分支名称时自动创建）</li><li>git fetch origin / git merge origin 分支名</li></ol><p>后续用到了再来写吧: )</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> basic </tag>
             
         </tags>
       
