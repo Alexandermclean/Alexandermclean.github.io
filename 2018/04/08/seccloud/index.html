@@ -499,7 +499,7 @@ this.$router.push({path:&#39;RouterPath&#39;, query:{data: this.userID}}) //其�
 this.$route.query.data</code></pre>
 <p>这两种传递参数的方法区别主要在于：params传递的参数不会体现在页面的URL里，刷新页面后数据就会消失；query传递的参数会以”?userID=xxx”的后缀方式体现在URL中，刷新页面数据还会保留。</p>
 <h2 id="4-父子组件通信"><a href="#4-父子组件通信" class="headerlink" title="4.父子组件通信"></a>4.父子组件通信</h2><p>在单个页面里的组件间的通信，例如打开新建或编辑框时的数据传递；这里只考虑父子组件间的通信，非父子组件通信通过创建事件中心的方式暂不深究。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@4.0/img/assets/dataConmmunicate.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.0/img/assets/dataConmmunicate.png" alt=""></p>
 <h3 id="1-父组件传递数据给子组件"><a href="#1-父组件传递数据给子组件" class="headerlink" title="1.父组件传递数据给子组件"></a>1.父组件传递数据给子组件</h3><p>主要通过props属性实现：</p>
 <pre><code class="vue">//父组件
 &lt;parent&gt;
@@ -581,7 +581,7 @@ props: {
 <li>actions：响应在 view上的用户输入导致的状态变化。</li>
 </ul>
 <p>这是一个普通的组件从样式渲染到数据绑定再到数据变化，单一的状态比较清晰，遇到多个组件共享状态时，这种简洁性很容易被破坏且难以管理。因此，把组件的共享状态抽出来，以一个全局单例模式管理，这就是VUEX背后的基本思想。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@4.0/img/assets/vuex.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.0/img/assets/vuex.png" alt=""></p>
 <p>后续用完之后再来写: )</p>
 
         </div>
@@ -633,7 +633,7 @@ props: {
           
             <div class="post-nepre half next">
           
-            <a href="/2018/01/08/basic/" rel="next">
+            <a href="/2018/01/08/async&promise/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/coding.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/coding.jpg">
               </div>
@@ -641,7 +641,7 @@ props: {
               Next</span>
               <div class="info">
                 <h3>
-                容易忘的用法</h3>
+                异步调用</h3>
                 <hr>
               </div>
             </a>
