@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-09T14:11:47.814Z</updated>
+  <updated>2019-12-10T02:34:10.915Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/12/12/test/"/>
     <id>http://yoursite.com/2018/12/12/test/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-12-09T14:11:47.814Z</updated>
+    <updated>2019-12-10T02:34:10.915Z</updated>
     
     <summary type="html">
     
@@ -32,9 +32,9 @@
       <category term="coding" scheme="http://yoursite.com/categories/coding/"/>
     
     
-      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+      <category term="basic" scheme="http://yoursite.com/tags/basic/"/>
     
-      <category term="悦读" scheme="http://yoursite.com/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="seccloud" scheme="http://yoursite.com/tags/seccloud/"/>
     
   </entry>
   
