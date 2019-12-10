@@ -8,7 +8,7 @@
       <link href="/2018/12/12/test/"/>
       <url>/2018/12/12/test/</url>
       
-        <content type="html"><![CDATA[<pre><code class="javascript">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="bash">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="html">&lt;div&gt;aaa&lt;/div&gt;</code></pre><pre><code class="yml">deploy:  type: git  repo:     github: 你的github仓库地址    # coding: 你的coding仓库地址  branch: master</code></pre><pre><code class="md">## ddas{% bili video_id [page] %}{% bili video_id [page] %}</code></pre>]]></content>
+        <content type="html"><![CDATA[<pre><code class="javascript">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="bash">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="html">&lt;div&gt;aaa&lt;/div&gt;</code></pre><pre><code class="yml">deploy:  type: git  repo:     github: 你的github仓库地址    # coding: 你的coding仓库地址  branch: master</code></pre>]]></content>
       
       
       <categories>
@@ -85,31 +85,6 @@
     
     
     <entry>
-      <title>异步调用</title>
-      <link href="/2018/01/08/async&amp;promise/"/>
-      <url>/2018/01/08/async&amp;promise/</url>
-      
-        <content type="html"><![CDATA[<h2 id="异步组合使用"><a href="#异步组合使用" class="headerlink" title="异步组合使用"></a>异步组合使用</h2><pre><code class="javascript">function sleep(duration){    return new Promise(function(resolve){        setTimeout(resolve, duration);    })}async function changeColor(duration,color){    document.getElementById(&quot;traffic-light&quot;).style.background = color;    await sleep(duration);}async function main(){    while(true){        await changeColor(3000,&quot;green&quot;);        await changeColor(1000, &quot;yellow&quot;);        await changeColor(2000, &quot;red&quot;);    }}main()</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> coding </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> javascript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>容易忘的用法</title>
       <link href="/2018/01/08/basic/"/>
       <url>/2018/01/08/basic/</url>
@@ -127,6 +102,31 @@
         <tags>
             
             <tag> basic </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>异步调用</title>
+      <link href="/2018/01/08/async&amp;promise/"/>
+      <url>/2018/01/08/async&amp;promise/</url>
+      
+        <content type="html"><![CDATA[<h2 id="异步组合使用"><a href="#异步组合使用" class="headerlink" title="异步组合使用"></a>异步组合使用</h2><pre><code class="javascript">function sleep(duration){    return new Promise(function(resolve){        setTimeout(resolve, duration);    })}async function changeColor(duration,color){    document.getElementById(&quot;traffic-light&quot;).style.background = color;    await sleep(duration);}async function main(){    while(true){        await changeColor(3000,&quot;green&quot;);        await changeColor(1000, &quot;yellow&quot;);        await changeColor(2000, &quot;red&quot;);    }}main()</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> coding </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
             
         </tags>
       
