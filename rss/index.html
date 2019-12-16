@@ -360,7 +360,7 @@
       
 <div id="vcomments"></div>
 <script>
-  window.onload = function(){
+  (function(){
       var valine = new Valine();
       valine.init({
         el: '#vcomments',
@@ -370,6 +370,20 @@
         placeholder: "👆👆👆万水千山总是情，留个名号行不行...",
         avatar: "robohash",
       })
+  })()
+
+  window.onload = function(){
+    if (!valine) {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "wt3hMTeW7bzzSoI3FbnPDmD7-gzGzoHsz",
+        appKey: "DXDGmk7ykJxJODkWi7b4CP4q",
+        path: window.location.pathname,
+        placeholder: "👆👆👆万水千山总是情，留个名号行不行...",
+        avatar: "robohash",
+      })
+    }
   }
 </script>
 
