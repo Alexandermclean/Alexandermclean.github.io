@@ -1,5 +1,6 @@
 (function(){
   if (!valine) {
+    var valine = new Valine();
     valine.init({
       el: '#vcomments',
       appId: "<%= theme.v_appId %>",
@@ -9,7 +10,6 @@
       avatar: "<%= theme.v_avatar %>",
     })
   }
-  var valine = new Valine();
 })();
 var _typeof = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (a) {
   return typeof a
