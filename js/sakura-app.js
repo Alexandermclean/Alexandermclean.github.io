@@ -1135,6 +1135,44 @@ var home = location.href,
         $('body').toggleClass('navOpen')
         $('#main-container,#mo-nav,.openNav').toggleClass('open')
       }
+    }, AH: function () {
+      if (Poi.windowheight == 'auto') {
+        if ($('h1.main-title').length > 0) {
+          var _height = $(window).height()
+          $('#centerbg').css({
+            'height': _height
+          })
+          $('#bgvideo').css({
+            'min-height': _height
+          })
+          $(window).resize(function () {
+            Siren.AH()
+          })
+        }
+      } else {
+        $('.headertop').addClass('headertop-bar')
+      }
+    }, PE: function () {
+      if ($('.headertop').length > 0) {
+        if ($('h1.main-title').length > 0) {
+          $('.blank').css({
+            'padding-top': '0px'
+          })
+          $('.headertop').css({
+            'height': 'auto'
+          }).show()
+          if (Poi.movies.live == 'open') Siren.liveplay()
+          $('.site-header').addClass('is-homepage')
+        } else {
+          $('.blank').css({
+            'padding-top': '75px'
+          })
+          $('.headertop').css({
+            'height': '0px'
+          }).hide()
+          Siren.livepause()
+        }
+      }
     }, CE: function () {
       $('.comments-hidden').show()
       $('.comments-main').hide()
@@ -1405,7 +1443,6 @@ $(function () {
   Siren.CE()
   Siren.MN()
   Siren.IA()
-  Siren.LV()
   if (window.is_app) injectStyles('#nprogress .bar { display: none; }')
   if (Poi.pjax) {
     $(document).pjax('a[target!=_top]', '#page', {
