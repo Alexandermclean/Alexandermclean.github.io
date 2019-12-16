@@ -1044,6 +1044,7 @@ var currentFontIsUbuntu = true
 mashiro_global.ini.normalize()
 
 var home = location.href,
+  s = $('#bgvideo')[0],
   Siren = {
     BSZ: function() {
       $.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
@@ -1134,6 +1135,98 @@ var home = location.href,
       if ($('body').hasClass('navOpen')) {
         $('body').toggleClass('navOpen')
         $('#main-container,#mo-nav,.openNav').toggleClass('open')
+      }
+    }, splay: function () {
+      $('#video-btn').addClass('video-pause').removeClass('video-play').show()
+      $('.video-stu').css({
+        'bottom': '-100px'
+      })
+      $('.focusinfo').css({
+        'top': '-999px'
+      })
+      $('#banner_wave_1').addClass('banner_wave_hide')
+      $('#banner_wave_2').addClass('banner_wave_hide')
+            // for (var i = 0; i < ap.length; i++) {
+            //     try {
+            //         ap[i].destroy()
+            //     } catch (e) {}
+            // }
+            // try {
+            //     hermitInit()
+            // } catch (e) {}
+      s.play()
+    }, spause: function () {
+      $('#video-btn').addClass('video-play').removeClass('video-pause')
+      $('.focusinfo').css({
+        'top': '49.3%'
+      })
+      $('#banner_wave_1').removeClass('banner_wave_hide')
+      $('#banner_wave_2').removeClass('banner_wave_hide')
+      s.pause()
+    }, liveplay: function () {
+      if (s) {
+        if (s.oncanplay != undefined && $('.haslive').length > 0) {
+          if ($('.videolive').length > 0) {
+            Siren.splay()
+          }
+        }
+      }
+    }, livepause: function () {
+      if (s) {
+        if (s.oncanplay != undefined && $('.haslive').length > 0) {
+          Siren.spause()
+          $('.video-stu').css({
+            'bottom': '0px'
+          }).html('已暂停 ...')
+        }
+      }
+    }, addsource: function () {
+      $('.video-stu').html('正在载入视频 ...').css({
+        'bottom': '0px'
+      })
+      var t = Poi.movies.name.split(','),
+        _t = t[Math.floor(Math.random() * t.length)]
+      $('#bgvideo').attr('src', Poi.movies.url + '/' + _t)
+      $('#bgvideo').attr('video-name', _t)
+    }, LV: function () {
+      if (s) {
+        var _btn = $('#video-btn')
+        _btn.on('click', function () {
+          if ($(this).hasClass('loadvideo')) {
+            $(this).addClass('video-pause').removeClass('loadvideo').hide()
+            Siren.addsource()
+            s.oncanplay = function () {
+              Siren.splay()
+              $('#video-add').show()
+              _btn.addClass('videolive')
+              _btn.addClass('haslive')
+            }
+          } else {
+            if ($(this).hasClass('video-pause')) {
+              Siren.spause()
+              _btn.removeClass('videolive')
+              $('.video-stu').css({
+                'bottom': '0px'
+              }).html('已暂停 ...')
+            } else {
+              Siren.splay()
+              _btn.addClass('videolive')
+            }
+          }
+          s.onended = function () {
+            $('#bgvideo').attr('src', '')
+            $('#video-add').hide()
+            _btn.addClass('loadvideo').removeClass('video-pause')
+            _btn.removeClass('videolive')
+            _btn.removeClass('haslive')
+            $('.focusinfo').css({
+              'top': '49.3%'
+            })
+          }
+        })
+        $('#video-add').on('click', function () {
+          Siren.addsource()
+        })
       }
     }, AH: function () {
       if (Poi.windowheight == 'auto') {
@@ -1443,6 +1536,7 @@ $(function () {
   Siren.CE()
   Siren.MN()
   Siren.IA()
+  Siren.LV()
   if (window.is_app) injectStyles('#nprogress .bar { display: none; }')
   if (Poi.pjax) {
     $(document).pjax('a[target!=_top]', '#page', {
