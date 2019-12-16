@@ -1,13 +1,15 @@
 (function(){
+  if (!valine) {
+    valine.init({
+      el: '#vcomments',
+      appId: "<%= theme.v_appId %>",
+      appKey: "<%= theme.v_appKey %>",
+      path: window.location.pathname,
+      placeholder: "<%= theme.v_placeholder %>",
+      avatar: "<%= theme.v_avatar %>",
+    })
+  }
   var valine = new Valine();
-  valine.init({
-    el: '#vcomments',
-    appId: "<%= theme.v_appId %>",
-    appKey: "<%= theme.v_appKey %>",
-    path: window.location.pathname,
-    placeholder: "<%= theme.v_placeholder %>",
-    avatar: "<%= theme.v_avatar %>",
-  })
 })();
 var _typeof = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (a) {
   return typeof a
