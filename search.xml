@@ -38,16 +38,16 @@
       
       <categories>
           
-          <category> note </category>
+          <category> 项目笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> seccloud </tag>
+            <tag> 安全云 </tag>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -65,14 +65,14 @@
       
       <categories>
           
-          <category> coding </category>
+          <category> 技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> javascript </tag>
+            <tag> JS </tag>
             
         </tags>
       
@@ -90,68 +90,14 @@
       
       <categories>
           
-          <category> note </category>
+          <category> 项目笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> basic </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test_title</title>
-      <link href="/2017/12/12/test/"/>
-      <url>/2017/12/12/test/</url>
-      
-        <content type="html"><![CDATA[<pre><code class="javascript">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="bash">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="html">&lt;div&gt;aaa&lt;/div&gt;</code></pre><pre><code class="yml">deploy:  type: git  repo:     github: 你的github仓库地址    # coding: 你的coding仓库地址  branch: master</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> coding </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> basic </tag>
-            
-            <tag> seccloud </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test2</title>
-      <link href="/2017/11/12/test2/"/>
-      <url>/2017/11/12/test2/</url>
-      
-        <content type="html"><![CDATA[<pre><code class="javascript">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="bash">var a = &#39;b&#39;var b = &#39;a&#39;</code></pre><pre><code class="html">&lt;div&gt;aaa&lt;/div&gt;</code></pre><pre><code class="yml">deploy:  type: git  repo:     github: 你的github仓库地址    # coding: 你的coding仓库地址  branch: master</code></pre><pre><code class="md">## ddas{% bili video_id [page] %}{% bili video_id [page] %}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> coding </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> basic </tag>
-            
-            <tag> seccloud </tag>
+            <tag> 容易忘 </tag>
             
         </tags>
       
