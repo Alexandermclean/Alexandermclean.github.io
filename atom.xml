@@ -41,7 +41,7 @@
     <link href="http://yoursite.com/2018/04/08/seccloud/"/>
     <id>http://yoursite.com/2018/04/08/seccloud/</id>
     <published>2018-04-08T14:16:01.000Z</published>
-    <updated>2019-12-23T10:23:11.369Z</updated>
+    <updated>2019-12-23T10:38:54.154Z</updated>
     
     <summary type="html">
     
@@ -52,7 +52,7 @@
       <category term="项目笔记" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
       <category term="安全云" scheme="http://yoursite.com/tags/%E5%AE%89%E5%85%A8%E4%BA%91/"/>
     
