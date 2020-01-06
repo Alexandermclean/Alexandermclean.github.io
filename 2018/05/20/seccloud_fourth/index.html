@@ -421,7 +421,7 @@ promise.then(function(value) {
   // failure
 });
 </code></pre>
-<h4 id="2-举两个栗子吧"><a href="#2-举两个栗子吧" class="headerlink" title="2.举两个栗子吧"></a>2.举两个栗子吧</h4><pre><code class="javascript">// 简单操作
+<h4 id="举两个栗子吧"><a href="#举两个栗子吧" class="headerlink" title="举两个栗子吧"></a>举两个栗子吧</h4><pre><code class="javascript">// 简单操作
 function timeout(ms) {
   return new Promise((resolve, reject) =&gt; {
     setTimeout(resolve, ms, &#39;done&#39;); // 第三个参数会作为resolve函数的参数使用
@@ -465,7 +465,7 @@ getJSON(&quot;/posts.json&quot;).then(function(json) {
 <blockquote>
 <p>promise新建后会执行some code的代码块，再执行后面的代码，最后执行resolve和reject的部分</p>
 </blockquote>
-<h4 id="3-链式回调，避免回调地狱"><a href="#3-链式回调，避免回调地狱" class="headerlink" title="3.链式回调，避免回调地狱"></a>3.链式回调，避免回调地狱</h4><p>多层的回调看起来十分不美观而且不易数据维护，在js中引入链式操作会变得优雅很多。</p>
+<h4 id="链式回调，避免回调地狱"><a href="#链式回调，避免回调地狱" class="headerlink" title="链式回调，避免回调地狱"></a>链式回调，避免回调地狱</h4><p>多层的回调看起来十分不美观而且不易数据维护，在js中引入链式操作会变得优雅很多。</p>
 <pre><code class="javascript">yPromise(value){
     return new Promise(function(resolve, reject){
         setTimeout(function(){
@@ -930,7 +930,7 @@ JSON.stringify(obj) // 在Map转换成对象的基础上JSON.stringify()</code><
 const arr = [...map] // [[true,1],[{&#39;y&#39;: h},2],[&#39;h&#39;,3]]
 
 JSON.stringify(arr)</code></pre>
-<h3 id="5-解构"><a href="#5-解构" class="headerlink" title="5.解构"></a>5.解构</h3><h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h4><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p>
+<h3 id="5-解构"><a href="#5-解构" class="headerlink" title="5.解构"></a>5.解构</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p>
 <pre><code class="javascript">// 以前赋值
 let a = 1
 let b = 2
