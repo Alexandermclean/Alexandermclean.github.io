@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-30T09:35:37.848Z</updated>
+  <updated>2020-03-30T10:24:41.567Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>node_cache</title>
+    <title>nodejs的缓存组件和缓存穿透问题</title>
     <link href="http://yoursite.com/2020/03/30/node_cache/"/>
     <id>http://yoursite.com/2020/03/30/node_cache/</id>
-    <published>2020-03-30T09:35:25.741Z</published>
-    <updated>2020-03-30T09:35:37.848Z</updated>
+    <published>2020-03-30T09:20:20.000Z</published>
+    <updated>2020-03-30T10:24:41.567Z</updated>
     
     <summary type="html">
     
+      node服务端缓存数据，提升响应速度和减轻后续服务的请求压力
+    
     </summary>
     
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
     
   </entry>
   

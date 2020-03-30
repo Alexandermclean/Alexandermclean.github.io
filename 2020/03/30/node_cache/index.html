@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">node_cache | 肉夹魔</title>
+  <title itemprop="name">nodejs的缓存组件和缓存穿透问题 | 肉夹魔</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -370,6 +370,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/coding.jpg);" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/coding.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      nodejs的缓存组件和缓存穿透问题</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://vissaan.com" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/custom/avatar3.png">
+          </a>
+        </span>
+        <span>
+          <a href="https://vissaan.com" target="_blank" rel="noopener">肉夹魔</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-30<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -377,15 +401,168 @@
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-          <header class="entry-header">
-            <h1 class="entry-title">node_cache</h1>
-            <p class="entry-census">&nbsp;·&nbsp;2020-3-30&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
-            <hr>
-          </header>
-        
         <div class="entry-content">
-          
+          <h2 id="1-需求背景"><a href="#1-需求背景" class="headerlink" title="1.需求背景"></a>1.需求背景</h2><p>在推荐页请求热点数据的请求中，热点数据刷新间隔是半小时一次，因为返回热点数据的服务可承受的请求量较小，并且数据在刷新间隔内是不会变化的，没必要所有的用户请求都透传到后续服务（推荐场景一天将近1.2亿次的pv），这会对后台服务要求太高也没必要，所以需要在node服务层做缓存数据，每次用户的请求从缓存中返回并且每30min node服务更新一次数据。</p>
+<h2 id="2-缓存数据分类"><a href="#2-缓存数据分类" class="headerlink" title="2.缓存数据分类"></a>2.缓存数据分类</h2><p>目前接触到的数据主要分为两大类吧：</p>
+<ol>
+<li>有边界数据：这种数据是指请求的数据可以一次性全部返回，后续的请求都可以沿用上次请求的数据，类似的有热点数据等；</li>
+<li>无边界数据：这种是指数据带有特征性质，上个用户的请求不能给下个用户请求用，类似的有用户画像等数据<br>先附上老大给写的c++伪码吧，我后面也自己封装了个node版的<pre><code class="c++">/*
+* LocalCache.h
+*
+*  Created on: 2020.3.16
+*      Author: bostinshi
+*/
+</code></pre>
+</li>
+</ol>
+<p>#ifndef LocalCache_H_<br>#define LocalCache_H_</p>
+<p>typedef promise::Future<int> CommonRetFuture;</p>
+<p>template<typename T><br>typedef CommonRetFuture FuncSyncData(const T &amp;); // Func是函数类型；</p>
+<p>template&lt;typename T, typename TKey,  typename TVal&gt;<br>class LocalCache {<br>public:<br>    LocalCache(size_t iCacheSize, size_t iBaseKey,<br>            size_t iShmSize, size_t iDataMaxSize, size_t iDataMinSize,<br>            int iEffectTime, int iReqIntvalTime, bool bSyncGetData,<br>            FuncSyncData<T> fSyncData<br>            ) {<br>        m_iEffectTime = iEffectTime;<br>        m_iReqIntvalTime = iReqIntvalTime;<br>        m_bSyncGetData = bSyncGetData;<br>        m_cache.initDataBlockSize(iDataMinSize, iDataMaxSize, 1.0);<br>        m_cache.initStore(iBaseKey, iShmSize);<br>        m_cache.initLock(iBaseKey);<br>        m_cache.setAutoErase(true);<br>        m_cache.setEraseMode(TC_HashMap::ERASEBYGET);</p>
+<pre><code>}
+
+void doInterval()
+{
+    fSyncData();
+}
+
+CommonRetFuture get(const TKey&amp; stKey, TVal&amp; stVal)
+{
+    promise::Promise&lt;ECommonRetCode&gt; promise;
+    //REPORT_COUNT(&quot;ProfileCache.get.request&quot;, 1);
+    int shmRet = m_cache.get(stKey, stVal);
+    //MT_RLOG&lt;&lt;&quot;get  : &quot;&lt;&lt;stKey.sMkey&lt;&lt;&quot;|shmRet :&quot;&lt;&lt; shmRet &lt;&lt; &quot;|iRefreshTime:&quot; &lt;&lt; iRefreshTime &lt;&lt;endl;
+    if (shmRet != TC_HashMap::RT_OK)
+    {
+        //LOGDEBUG&lt;&lt; &quot;get fail : &quot; &lt;&lt; stKey.sMkey &lt;&lt; &quot;|shmRet :&quot; &lt;&lt; shmRet &lt;&lt;endl;
+        //REPORT_COUNT(&quot;ProfileCache.get.retfailed_&quot;+taf::TC_Common::tostr(shmRet), 1);
+        promise.setValue(shmRet);
+        return promise.getFuture();
+    }
+
+    long lNowMs = TC_TimeProvider::getInstance()-&gt;getNowMs();
+    int iTimeInterval = lNowMs - stVal.iTimeStamp;
+
+    if (iTimeInterval &gt; m_iEffectTime) // refresh time
+    {
+        if(m_bSyncGetData)
+        {
+            return fSyncData(stKey);
+        }
+        else
+        {
+            if(!stVal.bHasReq || (lNowMs - stVal.iTimeStamp) &gt; m_iReqIntvalTime)
+            {
+                stVal.bHasReq = true;
+                stVal.iReqTimeStamp = lNowMs;
+                set(stKey, stVal);
+                fSyncData(stKey);
+            }
+            promise.setValue(shmRet);// time out data
+            return promise.getFuture();
+        }
+    }
+    return shmRet;
+}
+
+int set(const TKey&amp; stKey, TVal&amp; stVal)
+{
+    int shmRet = m_cache.set(stKey, stVal);
+    if (shmRet != TC_HashMap::RT_OK)
+    {
+        //MT_RELOG&lt;&lt;&quot;set fail : &quot;&lt;&lt;stKey.sMkey&lt;&lt;&quot;|shmRet :&quot;&lt;&lt; shmRet &lt;&lt;endl;
+        //REPORT_COUNT(&quot;ProfileCache.set.retfailed_&quot;+taf::TC_Common::tostr(shmRet), 1);
+    }
+    //MT_RLOG&lt;&lt;&quot;set  : &quot;&lt;&lt;stKey.sMkey&lt;&lt;&quot;|shmRet :&quot;&lt;&lt; shmRet &lt;&lt;endl;
+    return shmRet;
+}</code></pre><p>private:<br>    int m_iEffectTime;<br>    int m_iReqIntvalTime;<br>    bool m_bSyncGetData;<br>    FuncSyncData<T> fSyncData;<br>    T m_cache;<br>};</p>
+<p>#endif /* LocalCache_H_ */</p>
+<pre><code>
+## 3.实现代码
+组件主要实现了3个基本方法，get、set和getCacheKeys，主要的逻辑就是始终保持catch里面有数据，就会保证数据每次都是从node缓存里取回，不会对后续服务造成缓存穿透和太大响应压力；无论是打底的数据还是上次取回来的缓存，或者是上上次取回来的过期的缓存，在get函数返回的数据中，都会用code这个字段区分当前数据的性质：100-&gt;打底数据 200-&gt;正常缓存数据 300-&gt;过期缓存数据。
+```javascript
+export const Cache : any = {};
+
+Cache.global = {}
+Cache.cacheObj = {}
+
+/**
+ * 获取对应key值的缓存
+ * @param key 缓存对应的key值
+ */
+Cache.get = (key) =&gt; {
+    if (Object.keys(Cache.cacheObj).indexOf(key) &gt; -1) {
+        return Cache.cacheObj[key]
+    } else {
+        throw `暂无当前key值为：${key}的缓存`
+    }
+}
+
+/**
+ * 将取回来的数据存进缓存
+ * 传回去的数据结构{code: xxx, data: 取回的数据}
+ * 状态码：100-&gt;打底数据 200-&gt;正常缓存数据 300-&gt;过期缓存数据
+ * @param asyfun 异步请求数据的func，需要返回data或者error
+ * @param normal_interval 正常情况下向后台取数据的间隔
+ * @param error_interval 缓存穿透后调整的取数据间隔
+ * @param key 缓存对应的key值
+ * @param backData 打底的数据 {code: 100, data: 打底数据}
+ */
+Cache.set = async function (asyfun, normal_interval, error_interval, key, backData)  {
+    for (let cacheKey in Cache.cacheObj) {
+        if (cacheKey === key) {
+            Monitor.report(&#39;cache key duplicate&#39;, `key值重复，重复的key值：${key}`);
+            throw `key值重复，当前已有key值：${Object.keys(Cache.cacheObj)}` 
+        }
+    }
+
+    Cache.global[key + &#39;timer&#39;] = null
+    async function intervalFunc() { 
+        try {
+            let res = await asyfun()
+            Cache.cacheObj[key] = {code: 200, data: res}
+        } catch (e) {
+            console.log(&#39;cache error&#39;, e)
+            if (Cache.cacheObj[key].data &amp;&amp; Cache.cacheObj[key].code &amp;&amp; Cache.cacheObj[key].code === 200) { // 缓存里是上次的缓存，修改状态码是300
+                Cache.cacheObj[key].code = 300
+            } else if (Cache.cacheObj[key].data &amp;&amp; Cache.cacheObj[key].code &amp;&amp; Cache.cacheObj[key].code === 300) { // 缓存里是很久的缓存，修改状态码是300
+                Cache.cacheObj[key].code = 300
+            } else {
+                Cache.cacheObj[key] = {code: 100, data: backData}
+            }
+        }
+    }
+
+    try {
+        let res = await asyfun()
+        Cache.cacheObj[key] = {code: 200, data: res}
+        if (Cache.global[key + &#39;timer&#39;]) {
+            clearInterval(Cache.global[key + &#39;timer&#39;])
+        }
+        Cache.global[key + &#39;timer&#39;] = setInterval(intervalFunc, normal_interval)
+    } catch (e) { // 取数据操作异常
+        Monitor.report(&#39;cache get error&#39;, e);
+        if (Cache.cacheObj[key] &amp;&amp; Cache.cacheObj[key].data &amp;&amp; Cache.cacheObj[key].code &amp;&amp; Cache.cacheObj[key].code === 200) { // 缓存里是上次的缓存，修改状态码是300
+            Cache.cacheObj[key].code = 300
+        } else if (Cache.cacheObj[key] &amp;&amp; Cache.cacheObj[key].data &amp;&amp; Cache.cacheObj[key].code &amp;&amp; Cache.cacheObj[key].code === 300) { // 缓存里是很久的缓存，修改状态码是300
+            Cache.cacheObj[key].code = 300
+        } else {
+            Cache.cacheObj[key] = {code: 100, data: backData}
+        }
+        if (Cache.global[key + &#39;timer&#39;]) {
+            clearInterval(Cache.global[key + &#39;timer&#39;])
+        }
+        Cache.global[key + &#39;timer&#39;] = setInterval(intervalFunc, error_interval)
+    }
+
+}
+
+/**
+ * 获取当前已有缓存的key值
+ */
+Cache.getCacheKeys = () =&gt; {
+    return Object.keys(Cache.cacheObj)
+}</code></pre>
         </div>
         <!-- .entry-content -->
         <!-- <div class="single-reward">
@@ -468,16 +645,16 @@
 
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <a href="https://vissaan.com" target="_blank" rel="noopener" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/custom/avatar3.png" itemprop="image" alt="肉夹魔" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <!-- <h3 itemprop="name">
-            <a href="" itemprop="url" rel="author"></a>
+            <a href="https://vissaan.com" target="_blank" itemprop="url" rel="author noopener">肉夹魔</a>
             </h3> -->
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i></p>
+        <p><i class="iconfont icon-write"></i>需求测试中，来写个最近封装的组件（20/3/30 tencent）</p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->
