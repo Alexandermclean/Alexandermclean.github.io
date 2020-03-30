@@ -211,26 +211,6 @@
   </entry>
   
   <entry>
-    <title>容易忘的用法</title>
-    <link href="http://yoursite.com/2018/01/08/basic/"/>
-    <id>http://yoursite.com/2018/01/08/basic/</id>
-    <published>2018-01-08T14:16:01.000Z</published>
-    <updated>2019-12-23T08:51:44.716Z</updated>
-    
-    <summary type="html">
-    
-      平时开发会忘的一些小用法
-    
-    </summary>
-    
-      <category term="项目笔记" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="容易忘" scheme="http://yoursite.com/tags/%E5%AE%B9%E6%98%93%E5%BF%98/"/>
-    
-  </entry>
-  
-  <entry>
     <title>异步调用</title>
     <link href="http://yoursite.com/2018/01/08/async&amp;promise/"/>
     <id>http://yoursite.com/2018/01/08/async&amp;promise/</id>
@@ -247,6 +227,26 @@
     
     
       <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>容易忘的用法</title>
+    <link href="http://yoursite.com/2018/01/08/basic/"/>
+    <id>http://yoursite.com/2018/01/08/basic/</id>
+    <published>2018-01-08T14:16:01.000Z</published>
+    <updated>2019-12-23T08:51:44.716Z</updated>
+    
+    <summary type="html">
+    
+      平时开发会忘的一些小用法
+    
+    </summary>
+    
+      <category term="项目笔记" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="容易忘" scheme="http://yoursite.com/tags/%E5%AE%B9%E6%98%93%E5%BF%98/"/>
     
   </entry>
   
