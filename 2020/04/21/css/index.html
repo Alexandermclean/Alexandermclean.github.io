@@ -403,10 +403,12 @@
         
         <div class="entry-content">
           <h2 id="1-scale后的居中操作"><a href="#1-scale后的居中操作" class="headerlink" title="1.scale后的居中操作"></a>1.scale后的居中操作</h2><p>dom被scale后，由于缩小的中心点默认选在了中间，会造成一定的偏移</p>
-<pre><code class="css">transform: &#39;scale(0.9) translate(-50%)&#39;;
-position: &#39;absolute&#39;;
-left: 50%;
-transform-origin: &#39;0 0 0&#39; // 缩小点选在左上方</code></pre>
+<pre><code class="css">{
+    transform: &#39;scale(0.9) translate(-50%)&#39;;
+    position: &#39;absolute&#39;;
+    left: 50%;
+    transform-origin: &#39;0 0 0&#39; // 缩小点选在左上方
+}</code></pre>
 <h2 id="2-右边文字随着左边图片变小而适配"><a href="#2-右边文字随着左边图片变小而适配" class="headerlink" title="2.右边文字随着左边图片变小而适配"></a>2.右边文字随着左边图片变小而适配</h2><pre><code class="css">.image {
     width: auto;
     height: 162px;
