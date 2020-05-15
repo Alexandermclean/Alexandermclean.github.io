@@ -6,6 +6,7 @@
       appId: "<%= theme.v_appId %>",
       appKey: "<%= theme.v_appKey %>",
       path: window.location.pathname,
+      cookie: document.cookie,
       placeholder: "<%= theme.v_placeholder %>",
       avatar: "<%= theme.v_avatar %>",
     })
@@ -1117,6 +1118,7 @@ var home = location.href,
           appId: mashiro_option.v_appId,
           appKey: mashiro_option.v_appKey,
           path: window.location.pathname,
+          cookie: document.cookie,
           placeholder: mashiro_option.v_placeholder,
           avatar: mashiro_option.v_avatar,
         })
