@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-20T06:34:31.554Z</updated>
+  <updated>2020-10-27T09:18:30.354Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>深圳打工一年MARK</title>
+    <title>深圳打工一年了，加油！打工人！🤙</title>
     <link href="http://yoursite.com/2020/10/15/Sep_27th/"/>
     <id>http://yoursite.com/2020/10/15/Sep_27th/</id>
     <published>2020-10-15T08:21:01.000Z</published>
-    <updated>2020-10-20T06:34:31.554Z</updated>
+    <updated>2020-10-27T09:18:30.354Z</updated>
     
     <summary type="html">
     
@@ -251,26 +251,6 @@
   </entry>
   
   <entry>
-    <title>异步调用</title>
-    <link href="http://yoursite.com/2018/01/08/async&amp;promise/"/>
-    <id>http://yoursite.com/2018/01/08/async&amp;promise/</id>
-    <published>2018-01-08T14:16:01.000Z</published>
-    <updated>2019-12-23T08:50:03.058Z</updated>
-    
-    <summary type="html">
-    
-      平时开发会忘的一些小用法
-    
-    </summary>
-    
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>容易忘的用法</title>
     <link href="http://yoursite.com/2018/01/08/basic/"/>
     <id>http://yoursite.com/2018/01/08/basic/</id>
@@ -287,6 +267,26 @@
     
     
       <category term="容易忘" scheme="http://yoursite.com/tags/%E5%AE%B9%E6%98%93%E5%BF%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>异步调用</title>
+    <link href="http://yoursite.com/2018/01/08/async&amp;promise/"/>
+    <id>http://yoursite.com/2018/01/08/async&amp;promise/</id>
+    <published>2018-01-08T14:16:01.000Z</published>
+    <updated>2019-12-23T08:50:03.058Z</updated>
+    
+    <summary type="html">
+    
+      平时开发会忘的一些小用法
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
     
   </entry>
   
