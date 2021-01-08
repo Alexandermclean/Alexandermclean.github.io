@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-27T09:21:28.121Z</updated>
+  <updated>2021-01-08T07:28:28.860Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>云计算时代下的FaaS</title>
+    <link href="http://yoursite.com/2021/01/08/Jan_8th/"/>
+    <id>http://yoursite.com/2021/01/08/Jan_8th/</id>
+    <published>2021-01-08T07:52:01.000Z</published>
+    <updated>2021-01-08T07:28:28.860Z</updated>
+    
+    <summary type="html">
+    
+      FaaS
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>深圳打工一年了，加油！打工人！🤙</title>
@@ -98,14 +118,14 @@
   
   <entry>
     <title>安全云——H3C</title>
-    <link href="http://yoursite.com/2018/05/20/seccloud_seventh/"/>
-    <id>http://yoursite.com/2018/05/20/seccloud_seventh/</id>
+    <link href="http://yoursite.com/2018/05/20/seccloud_third/"/>
+    <id>http://yoursite.com/2018/05/20/seccloud_third/</id>
     <published>2018-05-20T14:16:01.000Z</published>
-    <updated>2020-01-06T12:54:23.504Z</updated>
+    <updated>2020-01-06T12:54:50.001Z</updated>
     
     <summary type="html">
     
-      安全云的Vue项目--上传和下载
+      安全云的Vue项目--node+登录校验
     
     </summary>
     
@@ -120,14 +140,14 @@
   
   <entry>
     <title>安全云——H3C</title>
-    <link href="http://yoursite.com/2018/05/20/seccloud_third/"/>
-    <id>http://yoursite.com/2018/05/20/seccloud_third/</id>
+    <link href="http://yoursite.com/2018/05/20/seccloud_seventh/"/>
+    <id>http://yoursite.com/2018/05/20/seccloud_seventh/</id>
     <published>2018-05-20T14:16:01.000Z</published>
-    <updated>2020-01-06T12:54:50.001Z</updated>
+    <updated>2020-01-06T12:54:23.504Z</updated>
     
     <summary type="html">
     
-      安全云的Vue项目--node+登录校验
+      安全云的Vue项目--上传和下载
     
     </summary>
     
@@ -251,26 +271,6 @@
   </entry>
   
   <entry>
-    <title>异步调用</title>
-    <link href="http://yoursite.com/2018/01/08/async&amp;promise/"/>
-    <id>http://yoursite.com/2018/01/08/async&amp;promise/</id>
-    <published>2018-01-08T14:16:01.000Z</published>
-    <updated>2019-12-23T08:50:03.058Z</updated>
-    
-    <summary type="html">
-    
-      平时开发会忘的一些小用法
-    
-    </summary>
-    
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>容易忘的用法</title>
     <link href="http://yoursite.com/2018/01/08/basic/"/>
     <id>http://yoursite.com/2018/01/08/basic/</id>
@@ -287,6 +287,26 @@
     
     
       <category term="容易忘" scheme="http://yoursite.com/tags/%E5%AE%B9%E6%98%93%E5%BF%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>异步调用</title>
+    <link href="http://yoursite.com/2018/01/08/async&amp;promise/"/>
+    <id>http://yoursite.com/2018/01/08/async&amp;promise/</id>
+    <published>2018-01-08T14:16:01.000Z</published>
+    <updated>2019-12-23T08:50:03.058Z</updated>
+    
+    <summary type="html">
+    
+      平时开发会忘的一些小用法
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
     
   </entry>
   
