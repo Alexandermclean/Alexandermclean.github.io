@@ -411,7 +411,7 @@
 <p><img src="/img/ssr1.png" alt=""></p>
 <h2 id="二、框架搭建"><a href="#二、框架搭建" class="headerlink" title="二、框架搭建"></a>二、框架搭建</h2><p>搭建这个服务框架前，也做过一系列的思考和比较，如何即达到服务端渲染的功能目的，又能高效构建、自由扩展且规范开发；在基于目前的技术栈的前提下，提出了本文要介绍的nestjs+nextjs的解决方案，在保证组内成员接入上手简单的同时，也满足了上述要求。Nest 是一个用于构建高效，可扩展的 Node.js 服务器端应用程序的框架。它使用渐进式 JavaScript，内置并完全持 TypeScript（但仍然允许开发人员使用纯 JavaScript 编写代码）并结合了 OOP（面向对象编程），FP（函数式编程）和 FRP（函数式响应编程）的元素。</p>
 <p>实现中，Nest的框架OOP模式也为实现服务端渲染带来了一定的麻烦，这也是搭建此框架最难的一点，下面会介绍如何解决。</p>
-<h3 id="1、普通的express服务-nextjs的开发模式即是："><a href="#1、普通的express服务-nextjs的开发模式即是：" class="headerlink" title="1、普通的express服务+nextjs的开发模式即是："></a>1、普通的express服务+nextjs的开发模式即是：</h3><pre><code class="javascript">// express + next:
+<h3 id="1、普通的express服务-nextjs的开发模式"><a href="#1、普通的express服务-nextjs的开发模式" class="headerlink" title="1、普通的express服务+nextjs的开发模式"></a>1、普通的express服务+nextjs的开发模式</h3><pre><code class="javascript">// express + next:
 const serve = express() // 实例化Serve
 const app = next({dev: true}) //实例化next对象
 serve.get(‘’, (req. res)=&gt;{
