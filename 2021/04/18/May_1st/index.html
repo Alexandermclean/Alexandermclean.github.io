@@ -444,28 +444,21 @@ import Next from &#39;next&#39;;
 <h4 id="未接入SSR服务页面性能"><a href="#未接入SSR服务页面性能" class="headerlink" title="未接入SSR服务页面性能"></a>未接入SSR服务页面性能</h4><p><img src="/img/ssr2.png" alt=""></p>
 <p><img src="/img/ssr3.png" alt=""></p>
 <blockquote>
-<p>CSR业务下发到页面曝光的漏斗：</p>
-</blockquote>
-<blockquote>
-<p>pv：60%，uv：67.3%</p>
+<p>CSR业务下发到页面曝光的漏斗：<br>pv：60%，uv：67.3%</p>
 </blockquote>
 <h4 id="资讯兴趣收集页面"><a href="#资讯兴趣收集页面" class="headerlink" title="资讯兴趣收集页面"></a>资讯兴趣收集页面</h4><p>1、主要指标：<br><img src="/img/ssr4.png" alt=""></p>
 <p>2、各种网络环境下的表现：<br><img src="/img/ssr5.png" alt=""></p>
 <h4 id="搜索兴趣收集页面"><a href="#搜索兴趣收集页面" class="headerlink" title="搜索兴趣收集页面"></a>搜索兴趣收集页面</h4><p>1、主要指标：<br><img src="/img/ssr6.png" alt=""></p>
 <p>2、各种网络环境下的表现：<br><img src="/img/ssr7.png" alt=""></p>
 <blockquote>
-<p>兴趣收集业务下发到页面曝光的漏斗：</p>
-</blockquote>
-<blockquote>
-<p>pv：80%，uv：92.6%</p>
+<p>兴趣收集业务下发到页面曝光的漏斗：<br>pv：80%，uv：92.6%</p>
 </blockquote>
 <h2 id="四、服务接入"><a href="#四、服务接入" class="headerlink" title="四、服务接入"></a>四、服务接入</h2><h3 id="1、工程的目录结构："><a href="#1、工程的目录结构：" class="headerlink" title="1、工程的目录结构："></a>1、工程的目录结构：</h3><p><img src="/img/ssr8.png" alt=""></p>
-<h3 id="2、申明服务端业务module"><a href="#2、申明服务端业务module" class="headerlink" title="2、申明服务端业务module"></a>2、申明服务端业务module</h3><p>通过Nest提供的构建api自动构建module：nest g module moduleName</p>
+<h3 id="2、申明服务端业务module"><a href="#2、申明服务端业务module" class="headerlink" title="2、申明服务端业务module"></a>2、申明服务端业务module</h3><h4 id="module"><a href="#module" class="headerlink" title="module"></a>module</h4><p>通过Nest提供的构建api自动构建module：nest g module moduleName</p>
 <blockquote>
 <p>根目录下执行，会在src目录生成对应module文件夹，以及自动引用到app.module，只需关注业务代码</p>
 </blockquote>
-<p>自动构建service：nest g service moduleName</p>
-<p>自动构建controller：nest g controller moduleName</p>
+<h4 id="controller-service"><a href="#controller-service" class="headerlink" title="controller/service"></a>controller/service</h4><p>自动构建service：nest g service moduleName<br>自动构建controller：nest g controller moduleName</p>
 <blockquote>
 <p>根目录下执行，会在src目录下对应module文件夹里生成对应文件、引用到module逻辑和jest测试用例模板，只需关注业务代码</p>
 </blockquote>
