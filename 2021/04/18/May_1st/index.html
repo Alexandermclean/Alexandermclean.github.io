@@ -454,7 +454,7 @@ import Next from &#39;next&#39;;
 <p>兴趣收集业务下发到页面曝光的漏斗：<br>pv：80%，uv：92.6%</p>
 </blockquote>
 <h2 id="四、服务接入"><a href="#四、服务接入" class="headerlink" title="四、服务接入"></a>四、服务接入</h2><h3 id="1、工程的目录结构："><a href="#1、工程的目录结构：" class="headerlink" title="1、工程的目录结构："></a>1、工程的目录结构：</h3><p><img src="/img/ssr8.png" alt=""></p>
-<h3 id="2、申明服务端业务module"><a href="#2、申明服务端业务module" class="headerlink" title="2、申明服务端业务module"></a>2、申明服务端业务module</h3><h4 id="module"><a href="#module" class="headerlink" title="module"></a>module</h4><p>通过Nest提供的构建api自动构建module：nest g module moduleName</p>
+<h3 id="2、申明业务模块"><a href="#2、申明业务模块" class="headerlink" title="2、申明业务模块"></a>2、申明业务模块</h3><h4 id="module"><a href="#module" class="headerlink" title="module"></a>module</h4><p>通过Nest提供的构建api自动构建module：nest g module moduleName</p>
 <blockquote>
 <p>根目录下执行，会在src目录生成对应module文件夹，以及自动引用到app.module，只需关注业务代码</p>
 </blockquote>
@@ -462,7 +462,8 @@ import Next from &#39;next&#39;;
 <blockquote>
 <p>根目录下执行，会在src目录下对应module文件夹里生成对应文件、引用到module逻辑和jest测试用例模板，只需关注业务代码</p>
 </blockquote>
-<h3 id="3、业务服务端接入代码如下（对应上图的content-controller-ts）："><a href="#3、业务服务端接入代码如下（对应上图的content-controller-ts）：" class="headerlink" title="3、业务服务端接入代码如下（对应上图的content.controller.ts）："></a>3、业务服务端接入代码如下（对应上图的content.controller.ts）：</h3><pre><code class="javascript">import { Controller, Get, Render, Req, Res, Param, Query } from &#39;@nestjs/common&#39;;
+<h3 id="3、业务服务端接入："><a href="#3、业务服务端接入：" class="headerlink" title="3、业务服务端接入："></a>3、业务服务端接入：</h3><p>代码如下：（对应上图的content.controller.ts）</p>
+<pre><code class="javascript">import { Controller, Get, Render, Req, Res, Param, Query } from &#39;@nestjs/common&#39;;
 import { ContentService } from &#39;./content.service&#39;;
 
 @Controller(&#39;content&#39;)
