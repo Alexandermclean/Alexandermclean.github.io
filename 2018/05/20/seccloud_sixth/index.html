@@ -1,0 +1,1060 @@
+  
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">安全云——H3C | 肉夹魔</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "肉夹魔 orz( • ̀ω•́ )✧";
+  mashiro_option.author_name = "( • ̀ω•́ )✧";
+  mashiro_option.site_url = "https://vissaan.com";
+  mashiro_option.v_appId = "wt3hMTeW7bzzSoI3FbnPDmD7-gzGzoHsz";
+  mashiro_option.v_appKey = "DXDGmk7ykJxJODkWi7b4CP4q";
+  mashiro_option.v_placeholder = "👆👆👆万水千山总是情，留个名号行不行...";
+  mashiro_option.v_avatar = "robohash";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "cdn_source/bg1.jpg,cdn_source/bg3.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container"> 
+    
+    <!-- <div class="headertop ">
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://vissaan.com" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/custom/avatar3.png">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>走在风中今天阳光 突然好温柔</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Alexandermclean" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://weibo.com/yuhuiovo?is_all=1" target="_blank" class="social-github" title="sina">
+                    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/social/sina.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/user/home?id=52866184" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/bu-yu-kuai-tnt-death/activities" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://weibo.com/yuhuiovo?is_all=1" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/custom/weixin.jpeg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div> -->
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">肉夹魔 orz</span>
+            <span class="shironeko">( • ̀ω•́ )✧</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          项目笔记
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E8%B5%84%E6%BA%90/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/">
+                          <i class="fa fa fa-plug" aria-hidden="true"></i>
+                          随便写写
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/tags/JS/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    TAG
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/JS/">
+                          <i class="fa fa-blind" aria-hidden="true"></i>
+                          JS
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/vue/">
+                          <i class="fa fa-wheelchair-alt" aria-hidden="true"></i>
+                          vue
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/%E5%AE%89%E5%85%A8%E4%BA%91/">
+                          <i class="fa fa-cloud" aria-hidden="true"></i>
+                          安全云
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/%E5%AE%B9%E6%98%93%E5%BF%98/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          容易忘
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                          <i class="fa fa fa-trash" aria-hidden="true"></i>
+                          日常
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/lab.jpg);" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/lab.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      安全云——H3C</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://vissaan.com" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/custom/avatar3.png">
+          </a>
+        </span>
+        <span>
+          <a href="https://vissaan.com" target="_blank" rel="noopener">肉夹魔</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2018-5-20<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="14-HTTPS协议加密机制"><a href="#14-HTTPS协议加密机制" class="headerlink" title="14.HTTPS协议加密机制"></a>14.HTTPS协议加密机制</h2><h3 id="1-为什么要加密"><a href="#1-为什么要加密" class="headerlink" title="1.为什么要加密"></a>1.为什么要加密</h3><p>因为http的内容是明文传输的，明文数据会经过中间代理服务器、路由器、wifi热点、通信服务运营商等多个物理节点，如果信息在传输过程中被劫持，传输的内容就完全暴露了，他还可以篡改传输的信息且不被双方察觉，这就是中间人攻击。所以我们才需要对信息进行加密。最简单容易理解的就是对称加密。</p>
+<h3 id="2-加密的种类"><a href="#2-加密的种类" class="headerlink" title="2.加密的种类"></a>2.加密的种类</h3><h4 id="1-对称加密"><a href="#1-对称加密" class="headerlink" title="1.对称加密"></a>1.对称加密</h4><p>通信双方各持一个相同的秘钥，对通信的内容加密解密，这种加密方式优点就是加密解密速度快，效率高。<br>但是怎么能保证通信的双方都拿到相同的秘钥而不被其他人拿到呢，这就很难了= =</p>
+<h4 id="2-非对称加密"><a href="#2-非对称加密" class="headerlink" title="2.非对称加密"></a>2.非对称加密</h4><p>就是有两把秘钥，一把私钥，一把公钥；用公钥加密的内容只能私钥解密，同样私钥加密的内容只能公钥解密。鉴于非对称加密的机制，我们会有这种思路：服务器先把公钥直接明文传输给浏览器，之后浏览器向服务器传数据前都先用这个公钥加密好再传，这条数据的安全似乎可以保障了！因为只有服务器有相应的私钥能解开这条数据。</p>
+<p>然而由服务器到浏览器的这条路怎么保障安全？如果服务器用它的的私钥加密数据传给浏览器，那么浏览器用公钥可以解密它，而这个公钥是一开始通过明文传输给浏览器的，这个公钥被谁劫持到的话，他也能用该公钥解密服务器传来的信息了。所以目前似乎只能保证由浏览器向服务器传输数据时的安全性。  </p>
+<h4 id="3-改良版的非对称加密"><a href="#3-改良版的非对称加密" class="headerlink" title="3.改良版的非对称加密"></a>3.改良版的非对称加密</h4><p>既然一对私钥秘钥能保证一方面的通信安全，那用两队公钥私钥就能保证互相通信安全了 : )<br>1.某网站拥有用于非对称加密的公钥A、私钥A’；浏览器拥有用于非对称加密的公钥B、私钥B’。<br>2.浏览器像网站服务器请求，服务器把公钥A明文给传输浏览器。<br>3.浏览器把公钥B明文传输给服务器。<br>4.之后浏览器向服务器传输的所有东西都用公钥A加密，服务器收到后用私钥A’解密。由于只有服务器拥有这个私钥A’可以解密，所以能保证这条数据的安全。<br>5.服务器向浏览器传输的所有东西都用公钥B加密，浏览器收到后用私钥B’解密。同上也可以保证这条数据的安全。</p>
+<p>的确可以！抛开这里面仍有的漏洞不谈（下文会讲），HTTPS的加密却没使用这种方案，为什么？最主要的原因是非对称加密算法非常耗时，特别是加密解密一些较大数据的时候有些力不从心，而对称加密快很多。</p>
+<h4 id="4-非对称加密-对称加密"><a href="#4-非对称加密-对称加密" class="headerlink" title="4.非对称加密+对称加密"></a>4.非对称加密+对称加密</h4><p>既然非对称加密耗时，非对称加密+对称加密结合可以吗？而且得尽量减少非对称加密的次数。当然是可以的，而且非对称加密、解密各只需用一次即可。<br>1.某网站拥有用于非对称加密的公钥A、私钥A’。<br>2.浏览器像网站服务器请求，服务器把公钥A明文给传输浏览器。<br>3.浏览器随机生成一个用于对称加密的密钥X，用公钥A加密后传给服务器。<br>4.服务器拿到后用私钥A’解密得到密钥X。<br>5.这样双方就都拥有密钥X了，且别人无法知道它。之后双方所有数据都用密钥X加密解密。  </p>
+<p>但是！这样会有另一个问题，中间人劫持替换了服务器给浏览器的公钥A，换成了自己伪造的公钥B，浏览器生成的对称秘钥X用公钥B加密后被劫持，劫持者用自己的私钥B’解密得到秘钥X，用之前劫持的公钥A加密后给服务器，服务器也会得到一样的秘钥X，但这时秘钥X已经泄露了= =<br>因此需要一个证明，证明浏览器收到的公钥确实是需要通信的服务器给的，类似于现实中张三向李四证明自己是张三一样，张三可以出具自己的身份证给李四，证明自己是张三；但是又有个问题，我不是张三但我伪造了一个张三的身份证，我好像就变成了张三了；这个时候身份证的真伪就必须有个权威机构来证明比如公安局，在公安局证明了手上的张三的身份证是真的的时候，你就是张三了。兜了一大圈，终于证明了我就是我了。</p>
+<h4 id="5-数字证书（CA证书）"><a href="#5-数字证书（CA证书）" class="headerlink" title="5.数字证书（CA证书）"></a>5.数字证书（CA证书）</h4><p>互联网中，CA机构就像是公安局，数字证书就是服务器的身份证，证书里包括了证书持有者、证书持有者的公钥等信息，服务器把证书传输给浏览器，证书就如身份证一样，可以证明“该公钥对应该网站”，浏览器从证书里取公钥就行了。<br>但证书是明文传递的，就像之前的公钥一样，因此需要一个不能伪造的标记证明CA证书的真实性；这里的解决办法和上面的token的做法差不多，CA证书除了有网站的信息的明文外，还会附带有一个由CA机构私钥加密明文内容的签名，这两者共同组成了数字证书。<br>数字签名的制作过程：<br>1.CA拥有非对称加密的私钥和公钥。<br>2.CA对证书明文信息进行hash。<br>3.对hash后的值用私钥加密，得到数字签名。  </p>
+<p><img src="./assets/ca.jpg" alt=""></p>
+<p>浏览器验证过程：<br>1.拿到证书，得到明文T，数字签名S。<br>2.用CA机构的公钥对S解密（由于是浏览器信任的机构，所以浏览器保有它的公钥。详情见下文），得到S’。<br>3.用证书里说明的hash算法对明文T进行hash得到T’。<br>4.比较S’是否等于T’，等于则表明证书可信。</p>
+<blockquote>
+<p>有一点，CA机构的公钥是否可信的问题，操作系统或浏览器一般会预装一些他们信任的CA机构的数字证书，也就是我们常看到的<strong>根证书</strong>，根证书则包含了该CA机构的公钥，用于浏览器和该CA机构信任的web服务器通信，类似于一个信任链，浏览器信任根证书里的公钥，发布该公钥的CA机构信任它认证的web服务器。</p>
+</blockquote>
+<p>另外，不知你们是否遇到过网站访问不了、提示要安装证书的情况？这里安装的就是根证书。说明浏览器不认给这个网站颁发证书的机构，也就是没有该机构的根证书，你就得手动下载安装（风险自己承担 : p）。安装该机构的根证书后，你就有了它的公钥，就可以用它验证服务器发来的证书是否可信了。</p>
+<h4 id="6-HTTPS协议的会话保持"><a href="#6-HTTPS协议的会话保持" class="headerlink" title="6.HTTPS协议的会话保持"></a>6.HTTPS协议的会话保持</h4><p>看完上述基于HTTPS协议加密的通信，会觉得过程很繁琐，如果每次请求在SSL/TLS层进行握手阶段，都要经历一次密钥传输过程会非常耗时，那怎么达到只传输一次呢？用session就行。<br>服务器会为每个浏览器（或客户端软件）维护一个session ID，在TSL握手阶段传给浏览器，浏览器生成好密钥传给服务器后，服务器会把该密钥存到相应的session ID下，之后浏览器每次请求都会携带session ID，服务器会根据session ID找到相应的密钥并进行解密加密操作，这样就不必要每次重新制作、传输密钥了。</p>
+<p><img src="./assets/ca2.jpg" alt=""></p>
+<blockquote>
+<p>不由得感叹一句，网络安全真的很难得啊 = =</p>
+</blockquote>
+<h2 id="15-关于IE9浏览器CSS文件大小限制问题"><a href="#15-关于IE9浏览器CSS文件大小限制问题" class="headerlink" title="15.关于IE9浏览器CSS文件大小限制问题"></a>15.关于IE9浏览器CSS文件大小限制问题</h2><p>前两天搭完新项目的环境跑在chrome浏览器是正常的，但在IE9里面样式失效了，具体表现就是写在vue文件中style标签里的样式不起作用，但在行内或是外联的CSS样式是可以的= =<br>找了资料和研究了一哈，根本原因是在IE9里面单个CSS文件大小不能超过234kb，超过的部分会被浏览器忽略，由于项目框架引入了iview组件，iview的css文件较大，因此写在style标签里的样式被忽略了。<br>所以可以把引用iview组件的css的操作从main.js转移到static里的style.js来引用，类似于引用common.css的做法。  </p>
+<pre><code class="javascript">webpack-server.js // 打包配置文件
+
+entry: {
+    app: [&quot;webpack-hot-middleware/client&quot;, &quot;babel-polyfill&quot;, &quot;./src/main.js&quot;],
+    style: [&quot;./static/js/style.js&quot;, &quot;webpack-hot-middleware/client&quot;]
+  } // 入口文件加入了style.js
+
+static/js/style.js // 引入样式的js文件
+
+import &#39;../css/common.css&#39;
+</code></pre>
+<p>这样做确实可以解决IE9里面css文件过大导致样式失效的问题，但是和我一开始想用切割打包后的css文件的做法不一样= = emmmmmm猜想应该是放在static文件夹里的文件打包的时候webpack都会自动压缩，所以文件大小要小很多。</p>
+<h2 id="16-计算机网络小结"><a href="#16-计算机网络小结" class="headerlink" title="16.计算机网络小结"></a>16.计算机网络小结</h2><p>经过一系列神奇的事情，我又来更新一下最近的感触 : ) 作为前端还是需要知道关于计算机网络的一些协议的，痛心疾首啊T T</p>
+<h3 id="1-计算机网络协议架构"><a href="#1-计算机网络协议架构" class="headerlink" title="1.计算机网络协议架构"></a>1.计算机网络协议架构</h3><p>OSI（Open System Interconnect）开放式系统互联，一般都叫OSI参考模型，是ISO（国际标准化组织）组织在1985年研究的网络互联模型。<br>最早的时候网络刚刚出现的时候，很多大型的公司都拥有了网络技术，公司内部计算机可以相互连接。可以却不能与其它公司连接。因为没有一个统一的规范。计算机之间相互传输的信息对方不能理解。所以不能互联。<br>ISO为了更好的使网络应用更为普及，就推出了OSI参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都有相同的规范，就能互联了。  </p>
+<p>不同协议在最初OSI模型中的位置：  </p>
+<table>
+<thead>
+<tr>
+<th align="center">7</th>
+<th align="left">应用层</th>
+<th align="left">例如HTTP、SMTP、SNMP、FTP、Telnet、SIP、SSH、NFS、RTSP、XMPP、Whois、ENRP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">6</td>
+<td align="left">表示层</td>
+<td align="left">例如XDR、ASN.1、SMB、AFP、NCP</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">会话层</td>
+<td align="left">例如ASAP、TLS、SSH、ISO 8327 / CCITT X.225、RPC、NetBIOS、ASP、Winsock、BSD sockets</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">传输层</td>
+<td align="left">例如TCP、UDP、RTP、SCTP、SPX、ATP、IL</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">网络层</td>
+<td align="left">例如IP、ICMP、IGMP、IPX、BGP、OSPF、RIP、IGRP、EIGRP、ARP、RARP、 X.25</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">链路层</td>
+<td align="left">例如以太网、令牌环、HDLC、帧中继、ISDN、ATM、IEEE 802.11、FDDI、PPP</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left">物理层</td>
+<td align="left">例如线路、无线电、光纤、信鸽</td>
+</tr>
+</tbody></table>
+<p>第7层应用层—直接对应用程序提供服务，应用程序可以变化，但要包括电子消息传输；<br>第6层表示层—格式化数据，以便为应用程序提供通用接口。这可以包括加密服务；<br>第5层会话层—在两个节点之间建立端连接。此服务包括建立连接是以全双工还是以半双工的方式进行设置，尽管可以在层4中处理双工方式；<br>第4层传输层—常规数据递送－面向连接或无连接。包括全双工或半双工、流控制和错误恢复服务；<br>第3层网络层—本层通过寻址来建立两个节点之间的连接，它包括通过互连网络来路由和中继数据；<br>第2层数据链路层—在此层将数据分帧，并处理流控制。本层指定拓扑结构并提供硬件寻址；<br>第1层物理层—原始比特流的传输，电子信号传输和硬件接口数据发送时，从第七层传到第一层，接受方则相反。  </p>
+<blockquote>
+<p>上三层总称应用层，用来控制软件方面；下四层总称数据流层，用来管理硬件，数据在发至数据流层的时候将被拆分。根据PDU （协议数据单元）：在传输层的数据叫段（segment），网络层叫包（packet），数据链路层叫帧（frame），物理层叫比特流（bit），其他更高层次的数据则是报文（message）</p>
+</blockquote>
+<p>OSI中每一层都有每一层的作用。比如网络层就要管理本机的IP的目的地的IP。数据链路层就要管理MAC地址（介质访问控制）等等，所以在每层拆分数据后要进行封装，以完成接受方与本机相互联系通信的作用。  </p>
+<h3 id="2-下层协议"><a href="#2-下层协议" class="headerlink" title="2.下层协议"></a>2.下层协议</h3><p>互联网是由一整套协议构成的，规定了在不同通信层的要求。</p>
+<h4 id="1-Ethernet（以太网）"><a href="#1-Ethernet（以太网）" class="headerlink" title="1.Ethernet（以太网）"></a>1.Ethernet（以太网）</h4><p>互联网中最底层的是以太网协议，它规定了电子信号如何组成数据包（packet），解决了子网内部的点对点通信。</p>
+<h4 id="2-IP协议"><a href="#2-IP协议" class="headerlink" title="2.IP协议"></a>2.IP协议</h4><p>上面的以太网协议可以解决一个局域网内的点对点通信，但是不能解决不同局域网之间的通信，IP协议就是为了解决这种情况。  </p>
+<p><img src="./assets/ip_protocol.jpg" alt="">  </p>
+<blockquote>
+<p>如上图所示，IP协议可以连接多个局域网  </p>
+</blockquote>
+<p>IP协议定义了一套自己的地址规则，称为IP地址。它实现了路由功能，允许某个局域网的A主机向另一个局域网的B主机发送消息。<br>我们买的路由器就是基于IP协议，局域网之间需要靠路由器连接；路由器背部有很多网口，其内部有一张路由表，规定了A段IP地址的出口a，B段IP地址的出口b……通过这套“指路牌”实现了数据包的转发。  </p>
+<p><img src="./assets/ip_table.jpg" alt="">  </p>
+<blockquote>
+<p>这张路由表注明了不同IP段目的地的数据包，要发送到哪个端口（interface）  </p>
+</blockquote>
+<p>IP协议只是一个地址协议，并不保证数据包的完整，如果路由器丢包（路由器内存满了，新进来的数据包就会丢失），就需要发现哪一个数据包丢失，以及重新补发这个数据包。这就需要依靠TCP协议了。<br><strong>简单来说，TCP协议的作用就是保证数据通信的完整性和可靠性，防止丢包。</strong></p>
+<h4 id="3-TCP协议"><a href="#3-TCP协议" class="headerlink" title="3.TCP协议"></a>3.TCP协议</h4><h5 id="1-数据包大小"><a href="#1-数据包大小" class="headerlink" title="1.数据包大小"></a>1.数据包大小</h5><p>以太网数据包（packet）大小是固定的，最初是1518个字节，后来增加到1522个字节。其中1500个字节是负载（payload），22个字节是头信息（head）。<br>IP数据包在以太网数据包的负载里，也有自己的头信息，最少需要20字节，所以IP数据包的负载最多是1480个字节。  </p>
+<p><img src="./assets/packetsize.png" alt="">  </p>
+<blockquote>
+<p>IP数据包在以太网数据包负载里，TCP数据包在IP数据包负载里  </p>
+</blockquote>
+<p>TCP数据包在IP数据包的负载里，它的头信息最少也需要20个字节，因此TCP数据包的最大负荷是1460个字节。由于IP协议和TCP协议往往有额外的头信息，所以实际的TCP数据包大概是1400个字节。  </p>
+<p><img src="./assets/packet_simple.png" alt=""></p>
+<h5 id="2-TCP数据包编号（SEQ）"><a href="#2-TCP数据包编号（SEQ）" class="headerlink" title="2.TCP数据包编号（SEQ）"></a>2.TCP数据包编号（SEQ）</h5><p>一个包1400字节，那么一次性发送大量数据，就必须分成多个包。比如，一个10MB的文件，需要发送7100多个包。<br>发送的时候，TCP协议为每个包编号（sequence number，简称SEQ），以便接收的一方按照顺序还原。万一发生丢包，也可以知道丢失的是哪一个包。<br>例如第一个包的编号是一个随机数。为了便于理解，这里就把它称为1号包。假定这个包的负载长度是100字节，那么可以推算出下一个包的编号应该是101。这就是说，每个数据包都可以得到两个编号：自身的编号，以及下一个包的编号。接收方由此知道，应该按照什么顺序将它们还原成原始文件。  </p>
+<p><img src="./assets/tcp_length.png" alt="">  </p>
+<blockquote>
+<p>当前包的编号是45943，下一个数据包的编号是46183，由此可知，这个包的负载是240字节。</p>
+</blockquote>
+<h5 id="3-TCP数据包的组装"><a href="#3-TCP数据包的组装" class="headerlink" title="3.TCP数据包的组装"></a>3.TCP数据包的组装</h5><p>收到TCP数据包以后，组装还原是操作系统完成的。应用程序不会直接处理TCP数据包。对于应用程序来说，不用关心数据通信的细节。除非线路异常，除此之外收到的总是完整的数据。应用程序需要的数据放在TCP数据包里面，但<strong>要把TCP数据变成应用层可识别的数据</strong>，就要有自己的格式（比如HTTP协议）。  </p>
+<p>TCP并没有提供任何机制，表示原始文件的大小，这由应用层的协议来规定。比如，HTTP协议就有一个头信息Content-Length，表示信息体的大小。对于操作系统来说，就是持续地接收TCP数据包，将它们按照顺序组装好，一个包都不少。操作系统不会去处理TCP数据包里面的数据。一旦组装好TCP数据包，就把它们转交给应用程序。TCP数据包里面有一个端口（port）参数，就是用来指定转交给监听该端口的应用程序。应用程序收到组装好的原始数据，以浏览器为例，就会根据HTTP协议的Content-Length字段正确读出一段段的数据。这也意味着，一次TCP通信可以包括多个HTTP通信。</p>
+<h5 id="4-发送窗口"><a href="#4-发送窗口" class="headerlink" title="4.发送窗口"></a>4.发送窗口</h5><p>接收方每收到两个TCP数据包，就要发送一个确认消息。“确认”的英语是 acknowledgement，所以这个确认消息就简称ACK。</p>
+<blockquote>
+<p>ACK 携带两个信息：</p>
+<blockquote>
+<p>1.期待要收到下一个数据包的编号<br>2.接收方的接收窗口的剩余容量  </p>
+</blockquote>
+</blockquote>
+<p>发送方有了这两个信息，再加上自己已经发出的数据包的最新编号，就会推测出接收方大概的接收速度，从而降低或增加发送速率。这被称为“发送窗口”，这个窗口的大小是可变的。  </p>
+<p><img src="./assets/seq_ack.png" alt="">  </p>
+<p>上图的传输步骤：<br>client：我想要下一个数据包的编号是1，长度是360个字节  </p>
+<p>server：数据给你，下个数据包的编号是361，我的发送窗口最大是120bytes  </p>
+<p>client：我想要下一个数据包编号是361，长度是120个字节（按照你的要最大限度）  </p>
+<p>server：数据给你，下个数据包的编号是481，我的发送窗口最大是120bytes  </p>
+<p>…  </p>
+<blockquote>
+<p>我自己总结了一下SEQ和ACK的含义：<br><strong>SEQ是我这次要从哪个编号开始要数据；ACK是我下次要从哪个编号开始给数据</strong></p>
+</blockquote>
+<h5 id="5-数据包丢失处理"><a href="#5-数据包丢失处理" class="headerlink" title="5.数据包丢失处理"></a>5.数据包丢失处理</h5><p>TCP协议可以保证数据通信的完整性，这是怎么做到的？<br>前面说过，每一个数据包都带有下一个数据包的编号。如果下一个数据包没有收到，那么ACK的编号就不会发生变化。  </p>
+<p>举例来说，现在收到了4号包，但是没有收到5号包。ACK就会记录，期待收到5号包。过了一段时间，5号包收到了，那么下一轮ACK会更新编号。如果5号包还是没收到，但是收到了6号包或7号包，那么ACK里面的编号不会变化，总是显示5号包。这会导致大量重复内容的ACK。<br>如果发送方发现收到三个连续的重复ACK，或者超时了还没有收到任何ACK，就会确认丢包，即5号包遗失了，从而再次发送这个包。通过这种机制，TCP保证了不会有数据包丢失。  </p>
+<p><img src="./assets/tcp_lost.png" alt="">  </p>
+<blockquote>
+<p>hostB没有收到100-120这段编号的数据包，会重复发ACK=100，触发hostA重发数据包</p>
+</blockquote>
+
+        </div>
+        <!-- .entry-content -->
+        <!-- <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1null"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1null"></li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <!-- <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer> -->
+        <!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2018/05/20/seccloud_seventh/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/lab.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/lab.jpg">
+              </div>
+              <span class="label">
+              Previous</span>
+              <div class="info">
+                <h3>
+                安全云——H3C</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2018/05/20/seccloud_third/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/lab.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/banner/lab.jpg">
+              </div>
+              <span class="label">
+              Next</span>
+              <div class="info">
+                <h3>
+                安全云——H3C</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script src='/cdn_source/valid.min.js'></script>
+<script>
+  (function(){
+    if (!valine) {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "wt3hMTeW7bzzSoI3FbnPDmD7-gzGzoHsz",
+        appKey: "DXDGmk7ykJxJODkWi7b4CP4q",
+        path: window.location.pathname,
+        cookie: document.cookie,
+        placeholder: "👆👆👆万水千山总是情，留个名号行不行...",
+        avatar: "robohash",
+      })
+    }
+  })()
+
+  window.onload = function(){
+    if (!valine) {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "wt3hMTeW7bzzSoI3FbnPDmD7-gzGzoHsz",
+        appKey: "DXDGmk7ykJxJODkWi7b4CP4q",
+        path: window.location.pathname,
+        cookie: document.cookie,
+        placeholder: "👆👆👆万水千山总是情，留个名号行不行...",
+        avatar: "robohash",
+      })
+    }
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="https://vissaan.com" target="_blank" rel="noopener" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@3.0/img/custom/avatar3.png" itemprop="image" alt="肉夹魔" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <!-- <h3 itemprop="name">
+            <a href="https://vissaan.com" target="_blank" itemprop="url" rel="author noopener">肉夹魔</a>
+            </h3> -->
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>写完需求搬blog内容（2020/1/6 tencent）</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 mclane<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+      <span style="color: #b9b9b9;">( • ̀ω•́ )✧ 
+        <a href="http://vissaan.com/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">肉夹魔sama </a>
+        <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>
+        <span style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">© 2016 • All rights reserved.</span>
+      </span>
+    </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script src='/cdn_source/valid.min.js'></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "","name":"","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "","name":"","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/alexandermclean/cdn@5.1/img/custom/avatar3.png">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">肉夹魔 orz( • ̀ω•́ )✧</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Alexandermclean" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/yuhuiovo?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=779186016&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  项目笔记
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E8%B5%84%E6%BA%90/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/">
+                  <i class="fa fa fa-plug" aria-hidden="true"></i>
+                  随便写写
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/tags/JS/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            TAG
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/JS/">
+                  <i class="fa fa-blind" aria-hidden="true"></i>
+                  JS
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/vue/">
+                  <i class="fa fa-wheelchair-alt" aria-hidden="true"></i>
+                  vue
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/%E5%AE%89%E5%85%A8%E4%BA%91/">
+                  <i class="fa fa-cloud" aria-hidden="true"></i>
+                  安全云
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/%E5%AE%B9%E6%98%93%E5%BF%98/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  容易忘
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                  <i class="fa fa fa-trash" aria-hidden="true"></i>
+                  日常
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/bangumi/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="163218826"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?be6c8959090055fea075a33191a71b8b";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
