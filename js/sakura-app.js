@@ -5,6 +5,7 @@
       el: '#vcomments',
       appId: "<%= theme.v_appId %>",
       appKey: "<%= theme.v_appKey %>",
+      serverURLs: 'https://wt3hmtew.lc-cn-n1-shared.com',
       path: window.location.pathname,
       cookie: document.cookie,
       placeholder: "<%= theme.v_placeholder %>",
@@ -1115,6 +1116,7 @@ var home = location.href,
         var valine = new Valine()
         valine.init({
           el: '#vcomments',
+          serverURLs: 'https://wt3hmtew.lc-cn-n1-shared.com',
           appId: mashiro_option.v_appId,
           appKey: mashiro_option.v_appKey,
           path: window.location.pathname,
